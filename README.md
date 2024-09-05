@@ -3,7 +3,10 @@
 
 ---
 
-[Watch the video](https://youtu.be/iCMIk_fypt0)
+<video width="640" height="360" controls>
+  <source src="https://youtu.be/iCMIk_fypt0" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ## 🎥 Introduction to Computer Vision and Image Processing
