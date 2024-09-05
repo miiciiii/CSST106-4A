@@ -134,7 +134,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-![Example Image](assets/example.jpg)
+![Example Image](assets/example.png)
 
 ## 🏁 Slide 5: Conclusion
 **Summary:**
