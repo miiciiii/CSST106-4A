@@ -3,7 +3,7 @@
 
 ---
 
-[Watch the video](assets/videos/Topic.1.1.Introduction.to.Computer.Vision.and.Image.Processing.mp4)
+[Watch the video](https://youtu.be/iCMIk_fypt0)
 
 
 ## 🎥 Introduction to Computer Vision and Image Processing
