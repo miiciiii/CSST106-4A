@@ -3,11 +3,7 @@
 
 ---
 
-## 🎥 Introduction to Computer Vision and Image Processing
-
-[![Watch the video](https://img.youtube.com/vi/iCMIk_fypt0/hqdefault.jpg)](https://youtu.be/iCMIk_fypt0)
-
-
+https://github.com/user-attachments/assets/dfcbbd0e-0816-4ec4-a88c-36e6f57ddcf4
 
 ## 🎥 Introduction to Computer Vision and Image Processing
 
