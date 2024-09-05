@@ -3,7 +3,10 @@
 
 ---
 
-## 🎥 Slide 1: Introduction to Computer Vision and Image Processing
+[Watch the video](assets/videos/Topic.1.1.Introduction.to.Computer.Vision.and.Image.Processing.mp4)
+
+
+## 🎥 Introduction to Computer Vision and Image Processing
 
 **Overview:**
 
@@ -18,7 +21,7 @@ Computer Vision is a branch of Artificial Intelligence (AI) that enables machine
 
 ---
 
-## 🧩 Slide 2: Types of Image Processing Techniques
+## 🧩 Types of Image Processing Techniques
 
 **1. Filtering:**
 
@@ -61,7 +64,7 @@ Segmentation divides an image into distinct regions or objects for easier analys
 
 ---
 
-## 📊 Slide 3: Case Study Overview
+## 📊 Case Study Overview
 
 **Selected AI Application:**
 
@@ -81,7 +84,7 @@ Segmentation divides an image into distinct regions or objects for easier analys
 
 ---
 
-## 🔍 Slide 4: Your Image Processing Implementation
+## 🔍 Your Image Processing Implementation
 
 **Model:**
 
@@ -134,9 +137,9 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-![Example Image](assets/example.png)
+![Example Image](assets/images/example.png)
 
-## 🏁 Slide 5: Conclusion
+## 🏁 Conclusion
 **Summary:**
 
 Effective image processing plays a pivotal role in the realm of artificial intelligence, serving as the foundation upon which many AI systems build their capabilities to interpret and analyze visual data. The application of image processing techniques such as filtering, edge detection, and segmentation significantly enhances the ability of AI systems to process visual information with greater accuracy and efficiency.
