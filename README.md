@@ -87,53 +87,46 @@ Segmentation divides an image into distinct regions or objects for easier analys
 
 **Model:**
 
-**Object Detection in Retail Environments**
+**Sobel Edge Detection**  
 
-**How It Works:**
+**How It Works:**  
 
-- **Input:** Images of store shelves.
-- **Processing:** Applies filtering and edge detection techniques.
-- **Output:** Detects and labels products on the shelves.
+- **Input:** Grayscale images of various subjects.  
+- **Processing:** Applies the Sobel operator to compute gradients in the x and y directions, combining them to highlight edges.  
+- **Output:** An image emphasizing the edges of objects within the original image.  
 
-**How It Helps:**
+**How It Helps:**  
 
-- **Improves Inventory Accuracy:** Provides precise counts of products.
-- **Enhances Operational Efficiency:** Reduces the need for manual stock checks.
+- **Enhances Feature Recognition:** Allows for better identification of object boundaries.  
+- **Facilitates Image Analysis:** Useful in applications like object detection and segmentation in computer vision.  
+
 
 **Example Code Snippet:**
 
 ```python
-import cv2
-import numpy as np
+# Sobel Edge Detection
+def sobel_edge_detection(img):
+    # Convert to grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# Load a pre-trained object detection model
-model = cv2.dnn.readNetFromCaffe('deploy.prototxt', 'model.caffemodel')
+    # Sobel edge detection in the x direction
+    sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=5)
 
-# Load an image from file (replace 'store_shelf.jpg' with your image)
-image = cv2.imread('store_shelf.jpg')
-height, width = image.shape[:2]
+    # Sobel edge detection in the y direction
+    sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=5)
 
-# Prepare the image for object detection
-blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300), (104.0, 177.0, 123.0))
-model.setInput(blob)
-detections = model.forward()
+    # Combine the two gradients
+    sobel_combined = cv2.magnitude(sobelx, sobely)
 
-# Process the detections
-for i in range(detections.shape[2]):
-    confidence = detections[0, 0, i, 2]
-    if confidence > 0.5:  # Threshold for detection confidence
-        box = detections[0, 0, i, 3:7] * np.array([width, height, width, height])
-        (startX, startY, endX, endY) = box.astype("int")
-        label = f"Object {i} ({confidence*100:.2f}%)"
-        
-        # Draw bounding box and label on the image
-        cv2.rectangle(image, (startX, startY), (endX, endY), (0, 255, 0), 2)
-        cv2.putText(image, label, (startX, startY - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+    return sobel_combined
 
-# Display the result
-cv2.imshow('Detected Objects', image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# Apply Sobel edge detection to the uploaded image
+sobel_edges = sobel_edge_detection(image)
+plt.imshow(sobel_edges, cmap='gray')
+plt.title("Sobel Edge Detection")
+plt.axis('off')
+plt.show()
+
 ```
 
 ![Example Image](assets/images/example.png)
@@ -152,3 +145,55 @@ Segmentation: Segmenting an image into distinct regions or objects simplifies th
 Together, these image processing techniques empower AI systems to achieve more precise object recognition, feature extraction, and overall decision-making. They enable machines to understand and interpret visual data in a way that closely mimics human visual perception, leading to more effective and intelligent applications across various domains.
 
 In conclusion, the integration of robust image processing techniques into AI systems not only enhances their ability to handle complex visual data but also drives advancements in fields ranging from autonomous vehicles to medical diagnostics. The continual development and refinement of these techniques will play a critical role in the future evolution of AI and its applications.
+
+# Image Processing Report
+
+## Overview
+
+This report outlines the steps taken to process an image using various techniques in OpenCV. The goal was to demonstrate image manipulation methods including scaling, rotation, blurring, and edge detection.
+
+## Steps Taken
+
+### Step 1: Install OpenCV
+* Installed the `opencv-python-headless` package for image processing capabilities.
+
+### Step 2: Import Necessary Libraries
+* Imported libraries:
+  * `cv2` for image processing.
+  * `numpy` for handling arrays and matrices.
+  * `matplotlib.pyplot` for displaying images.
+
+### Step 3: Load an Image
+* Used Google Colab's file upload feature to load an image.
+* Converted the uploaded image to OpenCV format (BGR).
+
+### Step 4: Scaling and Rotation
+* **Scaling**: Implemented a function to resize the image using a scale factor of 0.1.
+  * **Output**: A scaled-down version of the original image.
+* **Rotation**: Implemented a function to rotate the image by 45 degrees.
+  * **Output**: The image displayed at a 45-degree angle.
+
+### Step 5: Blurring Techniques
+* **Gaussian Blur**: Applied a Gaussian blur with a 5x5 kernel.
+  * **Output**: A smoother version of the original image.
+* **Median Blur**: Applied a median blur with a 5x5 kernel.
+  * **Output**: An image with reduced salt-and-pepper noise.
+* **Motion Blur**: Implemented a custom function for motion blur using a kernel size of 15.
+  * **Output**: An image with a streak effect simulating motion.
+* **Bilateral Filter**: Applied to maintain edges while reducing noise.
+  * **Output**: A detailed image with less noise.
+
+### Step 6: Edge Detection Techniques
+* **Canny Edge Detection**: Used Canny method with thresholds of 100 and 200.
+  * **Output**: Edge-detected version of the original image.
+* **Laplacian Edge Detection**: Implemented to highlight edges.
+  * **Output**: A grayscale image showing edges.
+* **Sobel Edge Detection**: Applied in both x and y directions and combined.
+  * **Output**: A combined gradient image emphasizing edges.
+* **Prewitt Edge Detection**: Utilized Prewitt operator kernels for edge detection.
+  * **Output**: An image showing edges detected by the Prewitt method.
+
+## Summary
+
+In this assignment, various image processing techniques were applied to manipulate and analyze an image. The processes included scaling, rotating, applying different types of blurring, and detecting edges using various methods. Each step produced visually distinct outputs, showcasing the capabilities of OpenCV for image manipulation.
+
