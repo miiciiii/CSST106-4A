@@ -146,7 +146,7 @@ Together, these image processing techniques empower AI systems to achieve more p
 
 In conclusion, the integration of robust image processing techniques into AI systems not only enhances their ability to handle complex visual data but also drives advancements in fields ranging from autonomous vehicles to medical diagnostics. The continual development and refinement of these techniques will play a critical role in the future evolution of AI and its applications.
 
-# Image Processing Report
+# Machine Problem No. 2 : Image Processing Techniques Report
 
 ## Overview
 
