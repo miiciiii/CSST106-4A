@@ -1,7 +1,20 @@
 ```python
-!pip install opencv-python
-!pip install matplotlib
-!pip install numpy
+!apt-get update
+!apt-get install -y cmake build-essential pkg-config
+
+!git clone https://github.com/opencv/opencv.git
+!git clone https://github.com/opencv/opencv_contrib.git
+
+!mkdir -p opencv/build
+%cd opencv/build
+!cmake -D CMAKE_BUILD_TYPE=RELEASE \
+        -D CMAKE_INSTALL_PREFIX=/usr/local \
+        -D OPENCV_ENABLE_NONFREE=ON \
+        -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
+        -D BUILD_EXAMPLES=OFF ..
+!make -j8
+!make install
+
 ```
 
 # Task 1: SIFT Feature Extraction
@@ -21,7 +34,7 @@ the image
 
 1. Load an image of your choice.
 ```python
-image = cv2.imread('/content/dog1.jpg')
+image = cv2.imread(IMAGE1_PATH)
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ```
 2. Use the SIFT (Scale-Invariant Feature Transform) algorithm to detect and compute keypoints and
@@ -37,7 +50,7 @@ plt.imshow(cv2.cvtColor(image_with_keypoints,cv2.COLOR_BGR2RGB))
 plt.title('SIFT Keypoints')
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/61e9aa1d-cc65-4d32-a959-8b7a3fe4487f)
+![SIFT Keypoints](assets/outputs/SIFT_KEYPOINTS.png)
 
 # Task 2: SURF Feature Extraction
 
@@ -55,7 +68,8 @@ that SIFT would detect.
 
 1. Load a different image (or the same one)
 ```python
-image = cv2.imread('/content/dog1.jpg')  # Replace 'your_image.jpg' with the actual path to your image
+IMAGE1_PATH = '/content/image1.jpg'
+image = cv2.imread(IMAGE1_PATH)
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 ```
 2. Apply the SURF (Speeded-Up Robust Features) algorithm to detect and compute keypoints and
@@ -72,7 +86,7 @@ plt.imshow(cv2.cvtColor(image_with_keypoints, cv2.COLOR_BGR2RGB))
 plt.title('SURF Keypoints')
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/9b6effd9-ba3c-4f50-b16f-7135f1d7c63c)
+![SURF Keypoints](assets/outputs/SURF_KEYPOINTS.png)
 
 # Task 3: ORB Feature Extraction
 
@@ -94,7 +108,7 @@ quickly.
 descriptors on another image
 
 ```python
-image = cv2.imread('/content/dog1.jpg')
+image = cv2.imread(IMAGE1_PATH)
 gray_image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
 orb = cv2.ORB_create()
@@ -110,7 +124,7 @@ plt.imshow(cv2.cvtColor(image_with_keypoints,cv2.COLOR_BGR2RGB))
 plt.title('ORB Keypoints')
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/4bef2f59-0e74-4994-a1da-2e7aaeb55e5a)
+![ORB Keypoints](assets/outputs/ORB_KEYPOINTS.png)
 
 # **Task 4: Feature Matching**
 
@@ -131,8 +145,10 @@ correspond to points in the second image.
 match the features between two different images using Brute-Force Matching or FLANN (Fast
 Library for Approximate Nearest Neighbors).
 ```python
-image1 = cv2.imread('/content/dog1.jpg',0)
-image2 = cv2.imread('/content/dog2.jpg',0)
+IMAGE1_PATH = '/content/image1.jpg'
+IMAGE2_PATH = '/content/image2.jpg'
+image1 = cv2.imread(IMAGE1_PATH,0)
+image2 = cv2.imread(IMAGE2_PATH,0)
 
 sift = cv2.SIFT_create()
 
@@ -153,7 +169,7 @@ plt.imshow(image_matches)
 plt.title('Feature Matching with SIFT')
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/f3057cd1-e065-466c-91be-31c4bf063efa)
+![Feature Matching with SIFT](assets/outputs/FEATURE_MATCHING_WITH_SIFT.png)
 
 # **Task5: Application of Feature Matching**
 
@@ -169,8 +185,8 @@ matrix is then used to warp one image to align it with the other.
 * Homography is used to align images.
 * This is useful in applications like panoramic image creation or object recognition.
 ```python
-image1 = cv2.imread('/content/dog1.jpg')
-image2 = cv2.imread('/content/dog2.jpg')
+image1 = cv2.imread(IMAGE1_PATH)
+image2 = cv2.imread(IMAGE2_PATH)
 
 gray1 = cv2.cvtColor(image1,cv2.COLOR_BGR2GRAY)
 gray2 = cv2.cvtColor(image2,cv2.COLOR_BGR2GRAY)
@@ -204,7 +220,7 @@ plt.imshow(cv2.cvtColor(result,cv2.COLOR_BGR2RGB))
 plt.title("Image Alignment Using Homography")
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/79b7473f-803f-42a8-bbf8-4de1e3e3fe2a)
+![Image Alignment Using Homography](assets/outputs/IMAGE_ALIGNMENT_USING_HOMOGRAPHY.png)
 
 
 # Task 6: Combining Feature Extraction Methods
@@ -228,8 +244,8 @@ them between two images.
 ```python
 import cv2
 
-image1 = cv2.imread('/content/dog1.jpg', 0)
-image2 = cv2.imread('/content/dog2.jpg', 0)
+image1 = cv2.imread(IMAGE1_PATH, 0)
+image2 = cv2.imread(IMAGE2_PATH, 0)
 
 sift = cv2.SIFT_create()
 keypoints1_sift, descriptors1_sift = sift.detectAndCompute(image1, None)
@@ -269,6 +285,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Untitled](https://github.com/user-attachments/assets/26567d35-223f-41be-8909-6e74e9ac0be9)
+![Combined SIFT and ORB matches](assets/outputs/COMBINED_SIFT_AND_ORB_MATCHES.png)
+
 
 
