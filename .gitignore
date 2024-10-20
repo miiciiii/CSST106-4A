@@ -1,0 +1,29 @@
+# Ignore all .weights files
+*.weights
+
+# Ignore all .cfg files
+*.cfg
+
+# Ignore the specific folder
+ssd_mobilenet_v2_coco_2018_03_29/
+
+# Ignore other common files and directories
+__pycache__/
+*.py[cod]
+*.so
+*.log
+*.csv
+*.dat
+*.pkl
+*.h5
+*.hdf5
+*.db
+*.sqlite
+*.tar.gz
+*.zip
+*.egg-info/
+.DS_Store
+.env
+.venv
+.vscode/
+.idea/
