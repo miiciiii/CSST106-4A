@@ -39,7 +39,7 @@ plt.title('HOG Image')
 
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/f0b4e932-ac61-486e-ab80-48d0f335f6c2)
+![HOG Image](assets\outputs\output.png)
 
 ### Conclusion
 One of the effective techniques used for the object detection technique is known as HOG, which refers to Histogram of Oriented Gradients. It pretty much applies to pedestrians in the given image as well and captures the gradient orientation distribution in small connected regions of the image to describe objects more explicitly about shape and appearance. Being robust towards light variations and small distortions, this method has excellent capabilities to highlight edge structures and patterns.
@@ -96,7 +96,7 @@ for out in outs:
 cv2_imshow(image)
 
 ```
-![Untitled](https://github.com/user-attachments/assets/4cc0e771-1b70-4891-8b4f-fee18a667d44)
+![Untitled](assets\outputs\output1.png)
 
 ### Conclusion
 YOLO, or You Only Look Once, is an object detection algorithm marking a very different direction in the development of techniques in this field. It supports real-time detection with high accuracy, and there is no need for multiple stages, as in most other traditional methods. Here it treats object detection as a single regression problem where it can predict bounding boxes and class probabilities directly from full images in one forward pass. This in turn greatly improves the detection time and, hence, Yolo is well suited for applications that require real-time performance, such as video surveillance, self-driving cars, and robotics.
@@ -149,7 +149,7 @@ cv2_imshow(image_np_with_detections)
 
 ```
 
-![Untitled](https://github.com/user-attachments/assets/4375c354-23bd-4cae-89a9-2db2fef0021e)
+![Untitled](assets\outputs\output2.png)
 
 ### Conclusion
 

@@ -32,7 +32,7 @@ algorithm to detect corners in an image.
   plt.axis('off')
   plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/75b610a5-2b9f-4417-b56f-3fd553d948be)
+![Harris Corner Detection](assets/outputs/output1.png)
 
 ### Conclusion
 Harris Corner Detection Algorithm is one of the most used algorithms in computer vision to find key points that are corners of an image. Corners can be argued to be points that have significant changes in intensity levels in several directions. This makes them so central during feature extraction in tasks such as object recognition, image matching, and 3D reconstruction. Such a detector works by computing the gradient of pixel intensities over a neighborhood and evaluating a response function to determine the "cornerness" of each point.
@@ -89,7 +89,7 @@ Key Points:
   plt.show()
 
 ```
-![Untitled](https://github.com/user-attachments/assets/0e9d409a-4594-4b06-8dea-e31fa94b7fff)
+![HOG Visualization](assets/outputs/output.png)
 
 ### Conclusion
 Histogram of Oriented Gradients is the most applicable feature extraction technique in many object detection and classification applications used in computer vision. It actually computes the orientation and magnitude of gradients within sections of images, where it captures patterns in edge orientation and intensity. These are then accumulated in histograms to describe the structure and the appearance of objects in an image.
@@ -132,7 +132,7 @@ plt.axis('off')
 
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/a8754e25-8470-4a17-b6ca-2aaf4142dab5)
+![FAST Keypoints](assets/outputs/output2.png)
 
 ### Conclusion
 It is also known as Features from Accelerated Segment Test, designed to be fast and effective at detecting interest points in an image. Instead of checking the pixels' neighbors against a comparison of one pixel, an algorithm like FAST checks the interest point by examining several pixels within a circular area; it is looking at whether or not the point could be considered a corner based on the differences in intensity with the surrounding pixels. It is fast and computationally very efficient in its performance, making it also ideally suited to real-time applications, especially in environments where processing power is limited, such as on mobile devices or embedded systems.
@@ -191,7 +191,7 @@ plt.title('Feature Matching using ORB and FLANN with Resized Images')
 plt.axis('off')
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/b261c289-bdbc-45d9-8166-e771250c2b47)
+![Feature Matching using ORB and FLANN with Resized Images](assets/outputs/4.png)
 
 ### Conclusion
 Feature matching using ORB and FLANN is one of the most efficient ways to find corresponding points between two images. ORB is a computationally efficient feature detector and descriptor since it combines the speed of FAST in the detection of key points with the feature of BRIEF regarding invariance. It also brings in orientation and scale invariance, so applications such as object recognition and image stitching are well supported by this index due to robust properties of objects, which can appear to be rotated or scaled.
@@ -258,7 +258,7 @@ plt.show()
 
 ```
 
-![Untitled](https://github.com/user-attachments/assets/8a3f82f3-c672-40ed-a171-519c7f3775fb)
+!['Image Segmentation using Watershed Algorithm'](assets/outputs/5.png)
 
 
 

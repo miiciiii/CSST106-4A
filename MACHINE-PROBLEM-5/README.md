@@ -102,7 +102,7 @@ print(f"Average processing time per image: {average_speed:.4f} seconds")
 
 ```
 
-![Untitled](https://github.com/user-attachments/assets/deedb861-d159-48a8-a6a4-fc48829746e4)
+![Untitled](assets\outputs\output.png)
 
 
 YOLOv3, trained on the COCO dataset, is known to predict with very high accuracy very wide ranges of object classes across various categories. In fact, the YOLOv3 model finds excellence in detecting real-time objects: it is a great choice for those tasks that require speed and precision. On average, YOLOv3 processes each image within about 1.48 seconds, managing fast inference against high accuracy. Its architecture enables it to detect more objects in one image. The performances of versatile applications include surveillance, autonomous driving, and image recognition systems.

@@ -101,7 +101,7 @@ Image processing involves several techniques that are essential for extracting v
   
   plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/019c7c62-e472-40b4-a6ec-cd2cd3ba6ce3)
+![Untitled](assets\outputs\output.png)
 
 
 # Emerging Form of Image Processing:

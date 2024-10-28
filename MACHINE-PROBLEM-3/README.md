@@ -43,7 +43,7 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/70c7d0dc-7138-40ea-8012-f11a127f73ae)
+![Untitled](assets\outputs\output.png)
 
 ## Step 2: Extract Keypoints and Descriptors Using SIFT, SURF, and ORB (30 points)
 * Apply the SIFT algorithm to detect keypoints and compute descriptors for both images.
@@ -106,7 +106,7 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/8bfd5a04-f4e2-4c27-ad02-4f5ee3d616d5)
+![Untitled](assets\outputs\output3.png)
 
 ## Step 3: Feature Matching with Brute-Force and FLANN
 ```python
@@ -153,7 +153,7 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/1495b156-f667-47c1-9c0f-063e11bfb8c2)
+![Untitled](assets\outputs\output2.png)
 
 ```python
 # Brute-Force Matcher with SIFT
@@ -199,7 +199,7 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/ea493bc0-4682-453f-9c61-75b82282bd83)
+![Untitled](assets\outputs\output5.png)
 
 ```python
 bf = cv2.BFMatcher(cv2.NORM_L2, crossCheck=True)
@@ -239,7 +239,7 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/3ea19f7e-2bd5-40d3-a72b-be55315f32fd)
+![Untitled](assets\outputs\output6.png)
 
 ## Step 4: Image Alignment Using Homography
 ```python
@@ -261,7 +261,7 @@ plt.imshow(cv2.cvtColor(result,cv2.COLOR_BGR2RGB))
 plt.title("Image Alignment Using Homography")
 plt.show()
 ```
-![Untitled](https://github.com/user-attachments/assets/90fa4e75-56b0-4347-a26b-a134bdb23d9d)
+![Untitled](assets\outputs\6.png)
 
 ## Step 5: Performance Analysis
 
