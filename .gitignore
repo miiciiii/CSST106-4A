@@ -6,6 +6,8 @@
 
 # Ignore the specific folder
 ssd_mobilenet_v2_coco_2018_03_29/
+dataset/
+runs/
 
 # Ignore other common files and directories
 __pycache__/
