@@ -12,10 +12,10 @@
 
 ### Documentation
 - <a href="documentation/4A-VILLAFLOR-MIDTERMS-EXAM-REPORT.md">Report</a>
-- <a href="">Presentation</a>
+- <a href="documentation/4A-VILLAFLOR-MIDTERMS-EXAM-report.pdf">Report (.pdf)</a>
 ### Video
 
-- <a href="">Video Presentation</a>
+- <a href="video/README.md">Video Presentation</a>
 
 # Project Outline
 
