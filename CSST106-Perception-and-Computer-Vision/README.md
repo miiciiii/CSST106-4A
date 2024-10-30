@@ -2,18 +2,16 @@
 ### Code
 1. **YOLO**
 
-  - <a href="code/4A_DELACRUZ_GONZALODO_MIDTERMS_EXAM_YOLO.ipynb">YOLO TRAINING</a>
-  - <a href="code/4A_DELACRUZ_GONZALODO_MIDTERMS_EXAM_YOLO_TEST.ipynb">YOLO EVALUATE</a>
+  - <a href="code/4A-VILLAFLOR-MIDTERMS-EXAM-YOLO.ipynb">YOLO TRAINING</a>
 
 2. **SSD**
 
-  - <a href="code/4A_DELACRUZ_GONZALODO_MIDTERMS_EXAM_SSD.ipynb">SSD TRAINING</a>
-  - <a href="code/4A_DELACRUZ_GONZALODO_MIDTERMS_EXAM_SSD_TEST.ipynb">SSD EVALUATE</a>
+  - <a href="code/4A-VILLAFLOR-MIDTERMS-EXAM-SSD.ipynb">SSD TRAINING</a>
 
 
 
 ### Documentation
-- <a href="documentation/4A-DELACRUZ-GONZALODO-MIDTERMS-EXAM-REPORT.md">Report</a>
+- <a href="documentation/4A-VILLAFLOR-MIDTERMS-EXAM-REPORT.md">Report</a>
 - <a href="">Presentation</a>
 ### Video
 
