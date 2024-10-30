@@ -44,7 +44,7 @@
 - **Performance**: High precision, real-time speed even on large inputs.
 
 #### Image 1
-![YOLO Detection - Image 1](../images/YOLO (You Only Look Once)/model_pred3.jpg)
+![YOLO Detection - Image 1](../images/YOLO (You Only Look Once)/model_pred1.jpg)
 
 ### SSD (MobileNetV2) Detection Example
 - **Input**: A 300x300 or 512x512 image.
@@ -52,7 +52,7 @@
 - **Performance**: Works well for smaller-scale applications and mobile platforms, though slower compared to YOLOv8.
 
 #### Image 1
-![MobileNet Detection - Image 1](../images/SSD (Single Shot MultiBox Detector)/model_pred1.jpg)
+![MobileNet Detection - Image 1](../images/SSD (Single Shot MultiBox Detector)/model_pred3.jpg)
 
 ## 5. Comparative Analysis
 
